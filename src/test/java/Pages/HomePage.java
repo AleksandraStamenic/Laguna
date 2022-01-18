@@ -45,6 +45,31 @@ public class HomePage extends BasePage{
         driver.findElement(By.xpath("//*[@id=\"dugme-korpa\"]")).click();
     }
 
+    public Korpa clickOnKorpaButton(){
+            driver.findElement(By.xpath("//*[@id=\"korpa_broj\"]")).click();
+            return new Korpa(driver);
+
+    }
+    public Prijava clickOnPrijavaButton(){
+            driver.findElement(By.xpath("//*[@id=\"header\"]/div[7]/a[1]")).click();
+            return new Prijava(driver);
+    }
+    public void clickOnButtonPrijava(){
+            driver.findElement(By.xpath("//*[@id=\"form-prijava-s\"]")).click();
+    }
+    public MalaLaguna clickOnMalaLagunaButton(){
+            driver.findElement(By.xpath("//*[@id=\"glavni-meni\"]/li[6]")).click();
+            return new MalaLaguna(driver);
+    }
+    public NajmladjiDo3 clickOnNajmladjiDo3Button(){
+            driver.findElement(By.xpath("//*[@id=\"mala-laguna-meni\"]/div[1]")).click();
+            return new NajmladjiDo3(driver);
+    }
+    public Slikovnice clickOnSlikovniceButton(){
+            driver.findElement(By.xpath("//*[@id=\"mala-laguna-sidebar\"]/div[3]/div[33]/labe")).click();
+            return new Slikovnice(driver);
+    }
+
 
 
 

@@ -36,6 +36,7 @@ public class BasePage {
         ((JavascriptExecutor) getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
     }
 
+
     private Object getDriver() {
         return new ChromeDriver();
     }

@@ -1,6 +1,7 @@
 package Tests;
 
 import Pages.HomePage;
+import Pages.Korpa;
 import Pages.ZmajevaRiznica;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -23,6 +24,9 @@ public class SearchTest extends BaseTest{
       ZmajevaRiznica zmajevaRiznica=new ZmajevaRiznica(driver);
       zmajevaRiznica.acceptCookies();
       driver.findElement(By.xpath("//*[@id=\"dugme-korpa\"]")).click();
+      zmajevaRiznica.clickOnKorpaButton();
+      driver.quit();
+
 
    }
 }

@@ -20,4 +20,9 @@ public class ZmajevaRiznica extends BasePage{
     public void clickOnDodajUKorpuButton(){
         driver.findElement(By.xpath("//*[@id=\"dugme-korpa\"]")).click();
     }
+    public Korpa clickOnKorpaButton(){
+        driver.findElement(By.xpath("//*[@id=\"korpa_broj\"]")).click();
+        return new Korpa(driver);
+
+    }
 }
