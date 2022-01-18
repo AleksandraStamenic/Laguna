@@ -1,11 +1,14 @@
 package Pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
 
-    public class HomePage extends BasePage{
+import static org.openqa.selenium.Keys.ENTER;
+
+public class HomePage extends BasePage{
         ChromeDriver driver;
         String homePageUrl="https://laguna.rs/";
 
@@ -27,9 +30,29 @@ import org.openqa.selenium.support.FindBy;
             return new KnjigeZaDecu(driver);
 
         }
+        public void searchByText(String searchText){
+            String inputXpath= "//*[@id=\"pretraga_rec\"]";
+            driver.findElement(By.xpath(inputXpath)).sendKeys(searchText);
+            driver.findElement(By.xpath(inputXpath)).sendKeys(ENTER);
+
+        }
+    public ZmajevaRiznica clickOnZmajevaRiznica(){
+        driver.findElement(By.xpath("//*[@id=\"spisak-knjiga-knjige\"]/div[3]/div[2]/a[1]")).click();
+        return new ZmajevaRiznica(driver);
+    }
+
+    public void clickOnDodajUKorpuButton(){
+        driver.findElement(By.xpath("//*[@id=\"dugme-korpa\"]")).click();
+    }
 
 
 
 
 
-}
+        }
+
+
+
+
+
+
