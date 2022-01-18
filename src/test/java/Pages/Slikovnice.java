@@ -1,5 +1,6 @@
 package Pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Slikovnice extends BasePage{
@@ -13,4 +14,7 @@ public class Slikovnice extends BasePage{
         this.driver=driver;
 
     }
+
+
+
 }

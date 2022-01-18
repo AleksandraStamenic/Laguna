@@ -3,6 +3,7 @@ package Tests;
 import Pages.HomePage;
 import Pages.MalaLaguna;
 import Pages.NajmladjiDo3;
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -20,11 +21,10 @@ public class Slikovnice extends BaseTest{
         JavascriptExecutor js=(JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,1000)");
         najmladjiDo3.clickOnSlikovniceButton();
-
-
-
-
-
+        Slikovnice slikovnice=new Slikovnice();
+        String ActualTitle = driver.getTitle();
+        String ExpectedTitle="Laguna - Mala Laguna - Knjige o kojima se priča";
+        Assert.assertEquals(ExpectedTitle,ActualTitle);
 
     }
 }
