@@ -16,6 +16,7 @@ public class LogIn extends BaseTest{
         driver.findElement(By.xpath("//*[@id=\"lozinka-f\"]")).sendKeys("Password");
         Prijava prijava=new Prijava(driver);
         prijava.clickOnButtonPrijava();
+        driver.quit();
 
 
 

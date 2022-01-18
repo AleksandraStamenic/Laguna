@@ -1,12 +1,11 @@
 package Pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Capabilities;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static java.sql.DriverManager.getDriver;
 
@@ -45,18 +44,20 @@ public class BasePage {
         this.driver = (ChromeDriver) driver;
     }
 
-    public void acceptCookies (){
-     driver.findElement(By.xpath("//*[@id=\"gdpr-box\"]/div/div[2]/a")).click();
+    public void acceptCookies () {
+        driver.findElement(By.xpath("//*[@id=\"gdpr-box\"]/div/div[2]/a")).click();
+    }
+
+
+        public void setDriver (ChromeDriver driver) {
+                this.driver = driver;
+    }
+
 
     }
 
 
 
-
-    public void setDriver(ChromeDriver driver) {
-        this.driver = driver;
-    }
-}
 
 
 

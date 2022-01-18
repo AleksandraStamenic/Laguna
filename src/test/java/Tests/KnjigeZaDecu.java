@@ -25,6 +25,7 @@ public class KnjigeZaDecu extends BaseTest {
                 knjigeZaDecu.getlistOfDecijeKnjige().get(i).click();
 
              }
+
         driver.quit();
      }
 

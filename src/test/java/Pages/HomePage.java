@@ -70,6 +70,20 @@ public class HomePage extends BasePage{
             return new Slikovnice(driver);
     }
 
+    public void clickOnSecondPoint(){
+            driver.findElement(By.xpath("//*[@id=\"slider-naslovna\"]/div[2]/span[2]")).click();
+    }
+    public void clickOnThirdPoint(){
+            driver.findElement(By.xpath("//*[@id=\"slider-naslovna\"]/div[2]/span[3]")).click();
+    }
+    public void clickOnFourthPoint(){
+            driver.findElement(By.xpath("/html/body/div/div[2]/div[2]/span[4]")).click();
+    }
+    public PrelistavanjeKnjiga clickOnPrelistavanjeKnjiga(){
+            driver.findElement(By.xpath("//*[@id=\"slider-naslovna\"]/div[1]/div[4]/div/a/picture/img")).click();
+            return new PrelistavanjeKnjiga(driver);
+    }
+
 
 
 

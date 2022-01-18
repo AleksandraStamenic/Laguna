@@ -1,7 +1,9 @@
 package Pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.FindBy;
 
 public class ZmajevaRiznica extends BasePage{
     ChromeDriver driver;
@@ -23,6 +25,11 @@ public class ZmajevaRiznica extends BasePage{
     public Korpa clickOnKorpaButton(){
         driver.findElement(By.xpath("//*[@id=\"korpa_broj\"]")).click();
         return new Korpa(driver);
-
     }
+
+    @FindBy (xpath = "//*[@id=\"top-lista-rb\"]")
+    public WebElement MestoNaTopListi;
+
+
+
 }
