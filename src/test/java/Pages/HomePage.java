@@ -83,6 +83,10 @@ public class HomePage extends BasePage{
             driver.findElement(By.xpath("//*[@id=\"slider-naslovna\"]/div[1]/div[4]/div/a/picture/img")).click();
             return new PrelistavanjeKnjiga(driver);
     }
+    public YouTube clickOnYouTubeButton(){
+            driver.findElement(By.xpath("//*[@id=\"drustvene-mreze\"]/li[4]/a")).click();
+            return new YouTube(driver);
+    }
 
 
 
